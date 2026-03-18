@@ -23,6 +23,7 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -197,4 +198,85 @@ body {
 
 .submit-btn:hover {
   opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 1.25rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .contact-btn {
+    padding: 0.6rem 1rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quote {
+    width: 92%;
+    padding: 1.75rem 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .quote::before {
+    inset: -30px;
+    filter: blur(40px);
+  }
+
+  .quote cite {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-section {
+    padding: 3rem 1.25rem 4rem;
+  }
+
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.875rem 1rem;
+    min-height: 44px;
+    font-size: 16px;
+  }
+
+  .form-group textarea {
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    min-height: 44px;
+    padding: 0.875rem 1.5rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.875rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .quote {
+    padding: 1.5rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .quote::before {
+    inset: -25px;
+    filter: blur(35px);
+  }
 }
